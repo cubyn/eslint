@@ -612,6 +612,12 @@
       const y = x + 1;
       return x * y;
     });
+
+    // best
+    [1, 2, 3].map(x => {
+      const y = x + 1;
+      return x * y;
+    });
     ```
 
   - [8.2](#8.2) <a name='8.2'></a> If the function body consists of a single expression, feel free to omit the braces and use the implicit return. Otherwise use a `return` statement.
@@ -780,6 +786,33 @@
     }
     ```
 
+
+  - [9.5](#9.5) <a name='9.5'></a> Use at maximum getter and setter method.
+
+    ```javascript
+    class Jedi {
+      constructor(options = {}) {
+        this.name = options.name || 'no name';
+      }
+
+      //ok
+      getName() {
+        return this.name;
+      }
+
+      //best
+      get name() {
+        return this.name;
+      }
+
+      toString() {
+        return `Jedi - ${this.getName()}`;
+      }
+    }
+    ```
+
+
+
 **[⬆ back to top](#table-of-contents)**
 
 
@@ -828,6 +861,19 @@
     // filename es6.js
     import { es6 } from './AirbnbStyleGuide';
     export default es6;
+    ```
+
+  - [10.4](#10.4) <a name='10.4'></a> Do not write declare use strict.
+
+  > Why? es6 modules use 'use strict' implicitely.
+
+    ```javascript
+    // bad
+    'use strict';
+    //... your code
+
+    // good
+    //... your code
     ```
 
 **[⬆ back to top](#table-of-contents)**
