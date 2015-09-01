@@ -863,7 +863,7 @@
     export default es6;
     ```
 
-  - [10.4](#10.4) <a name='10.4'></a> Do not write declare use strict.
+  - [10.4](#10.4) <a name='10.4'></a> Do not declare use strict inside module.
 
   > Why? es6 modules use 'use strict' implicitely.
 
