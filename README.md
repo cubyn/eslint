@@ -1,3 +1,5 @@
+:warning: **DEPRECATED** :warning:
+
 # Cubyn JavaScript Style guide
 
 *A mostly reasonable approach to JavaScript*
